@@ -1,0 +1,50 @@
+﻿@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@section scripts{ 
+    <script src="/Scripts/tictactoe.js" type="text/javascript"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body> 
+    <span id="gameInformation"></span>
+    <br/>
+    <span id="simbolo"></span>
+    <div>
+        <div id="register">
+            <strong>Your Name:</strong>
+            <br />
+            <input type="text" class="input" id="gamaName" />
+            <input type="button" class="button" id="registerName" value="Play" />
+        </div>
+        <div id="findOpponent"> 
+            <input type="button" class="button findGame" id="findGame" value="Find Opponent" />
+        </div>
+        <div id="waitingForOpponent">Looking for an opponent. Please wait!</div>
+        <div id="game">
+        </div>
+        <div class="clear"><input type="button" class="button findGame" id="findAnotherGame" value="Find new Opponent!" /></div>
+        <fieldset>
+            <legend>Debug message</legend>
+            <ul id="debug">
+            </ul>
+        </fieldset>
+    </div>
+    <div id="serverInformation">
+        Number of connected players:  <span id="amountOfClients">0</span><br />
+        Number of rounds in dispute: <span id="amountOfGames">0</span><br />
+        Total general games: <span id="totalAmountOfGames">0</span><br />
+        <br />
+        <br />
+    </div>
+</body> 
+</html>
